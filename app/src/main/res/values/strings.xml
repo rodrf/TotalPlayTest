@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TotalplayTest</string>
+    <string name="siging_account">Ingresa a tu cuenta.</string>
+    <string name="account_mail_phone">Cuenta, correo y teléfono.</string>
+    <string name="password">Contraseña</string>
+    <string name="signing">Iniciar sesión</string>
+    <string name="dont_have_password">¿No tienes contraseña? Registrate aquí</string>
+</resources>
