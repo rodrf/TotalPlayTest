@@ -5,4 +5,9 @@
     <string name="password">Contraseña</string>
     <string name="signing">Iniciar sesión</string>
     <string name="dont_have_password">¿No tienes contraseña? Registrate aquí</string>
+    <string name="title_bank_ref">Utiliza la referencia bancaria para pagar en los bancos participantes.</string>
+    <string name="bank_references">Referencias bancarias</string>
+    <string name="no_internet">Por favor, conectate a internet para ingresar.</string>
+    <string name="loading">Cargando...</string>
+    <string name="forgot_pass">Olvidé mi contraseña</string>
 </resources>

@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class ClientResponse(
 
 	@field:SerializedName("arrayReferences")
-	val arrayReferences: List<ArrayReferencesItem>? = null,
+	val arrayReferences: List<BankArrayReference>? = null,
 
 	@field:SerializedName("status")
 	val status: Int? = null
@@ -29,7 +29,7 @@ data class ImagesItem(
 	val url3X3: String? = null
 )
 
-data class ArrayReferencesItem(
+data class BankArrayReference(
 
 	@field:SerializedName("reference")
 	val reference: String? = null,

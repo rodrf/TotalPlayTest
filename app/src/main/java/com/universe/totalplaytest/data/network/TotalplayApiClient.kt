@@ -15,6 +15,6 @@ interface TotalplayApiClient {
     suspend fun login(@Body dataLogin: DataLogin): Response<LoginResponse>
 
     @POST("clienteresp.do")
-    suspend fun clientResponse(@QueryMap login: Map<String, String>): Response<ClientResponse>
+    suspend fun clientResponse(@Body login: Map<String, String>): Response<ClientResponse>
 
 }

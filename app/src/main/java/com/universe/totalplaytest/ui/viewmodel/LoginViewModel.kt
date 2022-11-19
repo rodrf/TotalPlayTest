@@ -1,6 +1,7 @@
-package com.universe.totalplaytest.ui.viewmodel.login
+package com.universe.totalplaytest.ui.viewmodel
 
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -13,19 +14,20 @@ import javax.inject.Inject
 @HiltViewModel
 class LoginViewModel @Inject constructor(
     private val doLogin: Login
-): ViewModel() {
+) : ViewModel() {
     val isLoading = MutableLiveData<Boolean>()
-    val session = MutableLiveData<Boolean>()
+    val session = MutableLiveData<String>()
 
-    fun login(user: String, password: String){
+    fun login(user: String, password: String) {
         viewModelScope.launch {
             isLoading.postValue(true)
             val result = doLogin(user, password)
             result?.let { response ->
-                if(response.session != null && !response.session.toString().isNullOrEmpty())
-                    //Save idSession to localStorage
+                if (response.session != null && !response.session.toString().isNullOrEmpty()) {
+
                     Log.d("login_total", "session: ${response.session}")
-                    session.postValue(true)
+                    session.postValue(response.session.toString())
+                }
             }
             isLoading.postValue(false)
         }
